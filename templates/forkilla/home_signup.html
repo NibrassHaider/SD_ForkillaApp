@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% load static %}
+    <link href='{% static "stylesheets/comparator.css" %}' rel="stylesheet" type="text/css" media="all" />
+    <title>Sign Up </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- Custom Theme files -->
+    <link href='{% static "stylesheets/signup.css" %}' rel="stylesheet" type="text/css" media="all" />
+    <!-- //Custom Theme files -->
+    <!-- web font -->
+    <link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- //web font -->
+</head>
+<body>
+	<!-- main -->
+	<div class="main-w3layouts wrapper">
+		<div class="form-style-5">
+             <fieldset>
+                <legend><span class="number">1</span> Sign Up to Forkilla </legend>
+             </fieldset>
+        </div>
+		<div class="main-agileinfo">
+			<div class="agileits-top">
+				<form method="post">
+
+                    {% if errors %}
+                       <div class="alert alert-warning alert-dismissible fade show">
+                            <strong>Warning!</strong>{{ message }}
+                            <button type="button" class="close" data-dismiss="alert">&times;</button>
+                       </div>
+                    {% endif %}
+                    {% csrf_token %}
+                    {{ form.as_p }}
+					<div class="wthree-text">
+						<label class="anim">
+							<input type="checkbox" class="checkbox" required="">
+							<span>I Agree To The Terms & Conditions</span>
+						</label>
+						<div class="clear"> </div>
+					</div>
+					<input type="submit" value="SIGNUP">
+				</form>
+				<p>Already have an Account? <a href="{% url 'login' %}"> Login Now!</a></p>
+                <p>Continue as a <a href="{% url 'restaurants' %}"> Guest !</a></p>
+
+			</div>
+		</div>
+		<!-- copyright -->
+		<div class="colorlibcopy-agile">
+			<p>© 2019 Forkilla. All rights reserved </p>
+		</div>
+		<!-- //copyright -->
+		<ul class="colorlib-bubbles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<!-- //main -->
+</body>
+</html>

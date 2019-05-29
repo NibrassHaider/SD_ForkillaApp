@@ -1,0 +1,30 @@
+{% extends "forkilla/base.html" %}
+
+{% block content %}
+    <h2> Starting review for restaurant </h2>
+    <form method="POST" >
+        {% csrf_token %}
+        {% if  error %}
+            {{ error }} error
+        {% endif %}
+        {{ form.as_p }}
+        <button type="submit" >Review</button>
+    </form>
+    {% if viewed_restaurants %}
+
+            <h2> 5 most visited restaurants </h2>
+            <div class="list-group">
+            <form action="{% url 'reservation'%}" method="post">
+            {% csrf_token %}
+            {% for restaurant in viewed_restaurants.restaurant.all|slice:":5:-1" %}
+                <br>
+                <a href="{% url 'details' restaurant.restaurant_number%}" class="list-group-item">Restaurant Id: {{ restaurant.restaurant_number }}, Category: {{ restaurant.get_human_category }}, City: {{ restaurant.city }}, Country: {{ restaurant.country }}</a><br>
+                <button type="submit" name="reservation" value={{restaurant.restaurant_number}}> Reserva</button>
+                <br>
+            {% endfor %}
+             </form>
+            </div>
+    {% endif %}
+{% endblock %}
+
+

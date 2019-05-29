@@ -1,0 +1,54 @@
+{% extends "forkilla/base.html" %}
+{% load text_string %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurant Template</title>
+</head>
+<body>
+    {% if alert %}
+        <script>
+            alert('{{ alert }}');
+        </script>
+    {% endif %}
+    {% if restaurants %}
+        {% if promoted %}
+            <h2>Promoted Restaurants</h2>
+            <ul>
+            <form action="{% url 'reservation'%}" method="get">
+                {% for restaurant in restaurants %}
+                       <br>
+                       <a href="{% url 'restaurants' restaurant.city restaurant.category%}">{{ restaurant.city }} {{restaurant.get_human_category}}</a> <br>
+                       <a href="{% url 'details' restaurant.restaurant_number%}"> {{restaurant.restaurant_number}} </a> : {{restaurant.menu_description}}
+                       <br><button type="submit" name="reservation" value={{restaurant.restaurant_number}}> Reserva</button>
+                        <br>
+                {% endfor %}
+            </form>
+            </ul>
+        {% endif %}
+        {% if city%}
+            {% for restaurant in restaurants %}
+                <li><a href ="{% url 'restaurants' restaurant.city restaurant.category %}"><br> City : {{ restaurant.city }} , Category : {{ restaurant.category }} </a></li>
+
+            {% endfor %}
+        {% endif %}
+        {%  if cc %}
+            {% for restaurant in restaurants %}
+                {{ restaurant.city }}
+                <li><a href="{% url 'restaurants'  restaurant.city restaurant.category restaurant.menu_description|current_time %}"> City : {{ restaurant.city }} , Category : {{ restaurant.category }} , Menu Description : {{ restaurant.menu_description }} </a></li>
+
+            {% endfor %}
+        {% endif %}
+        {%  if menu %}
+            {% for restaurant in restaurants %}
+                <li><a href="{% url 'details' restaurant.restaurant_number %}"> ID : {{ restaurant.restaurant_number }} </a> </li>
+
+            {% endfor %}
+        {% endif %}
+    {% else %}
+        <p>No restaurants are available.</p>
+    {% endif %}
+
+
+</body>
+{% endblock %}

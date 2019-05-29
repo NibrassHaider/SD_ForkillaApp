@@ -1,0 +1,186 @@
+[
+  {
+    "model": "forkilla.Restaurant",
+    "pk": 1,
+    "fields": {
+      "restaurant_number": "09186777",
+      "name": "Only Tapas",
+      "menu_description" :"TAPAS",
+      "price_average" : "30",
+      "is_promot" : "False",
+      "rate" : "9",
+      "category" : "Medi",
+      "city": "Barcelona",
+      "address": "Les Rambles, 33",
+      "country": "Spain",
+      "capacity": 40
+    }
+  },
+   {
+    "model": "forkilla.Restaurant",
+    "pk": 2,
+    "fields": {
+      "restaurant_number": "09186666",
+      "name": "Only Pinxos",
+      "menu_description" :"PINXOS",
+      "price_average" : "130.33",
+      "is_promot" : "True",
+      "rate" : "5",
+      "category" : "Basq",
+      "city": "Barcelona",
+      "address": "Gran Via de les Corts Catalanes, 495",
+      "country": "Spain",
+      "capacity": 240
+    }
+  },{
+    "model": "forkilla.Restaurant",
+    "pk": 3,
+    "fields": {
+      "restaurant_number": "09186788",
+      "name": "Healthy Food",
+      "menu_description" :"Healthy Mediterrian Food",
+      "price_average" : "20",
+      "is_promot" : "True",
+      "rate" : "4",
+      "category" : "Medi",
+      "city": "Barcelona",
+      "address": "calle espronceda, 33",
+      "country": "Spain",
+      "capacity": 40
+    }
+  },{
+    "model": "forkilla.Restaurant",
+    "pk": 4,
+    "fields": {
+      "restaurant_number": "09186977",
+      "name": "Fornet",
+      "menu_description" :"Delicious Food",
+      "price_average" : "15",
+      "is_promot" : "True",
+      "rate" : "4",
+      "category" : "Russ",
+      "city": "roma",
+      "address": "Street Park Lane",
+      "country": "Italy",
+      "capacity": 30
+    }
+  },{
+    "model": "forkilla.Restaurant",
+    "pk": 5,
+    "fields": {
+      "restaurant_number": "09186717",
+      "name": "Greek Cuisine",
+      "menu_description" :"Chicken rice with special salsa",
+      "price_average" : "30",
+      "is_promot" : "True",
+      "rate" : "4.5",
+      "category" : "Grek",
+      "city": "Atenas",
+      "address": "High Street, 33",
+      "country": "Greece",
+      "capacity": 50
+    }
+  },
+  {
+    "model": "forkilla.Restaurant",
+    "pk": 6,
+    "fields": {
+      "restaurant_number": "09186779",
+      "name": "Unique Peruvian Cook",
+      "menu_description" :"Seco de cordero, arroz con pollo",
+      "price_average" : "20",
+      "is_promot" : "True",
+      "rate" : "5",
+      "category" : "Peru",
+      "city": "Lima",
+      "address": "Calle limeña, 33",
+      "country": "Peru",
+      "capacity": 50
+    }
+  },
+  {
+    "model": "forkilla.Restaurant",
+    "pk": 7,
+    "fields": {
+      "restaurant_number": "09186117",
+      "name": "Rasoi",
+      "menu_description" :"Biryani , Pulao , chiken tikka",
+      "price_average" : "20",
+      "is_promot" : "True",
+      "rate" : "5",
+      "category" : "Hind",
+      "city": "Mumbai",
+      "address": "GT Road, 33",
+      "country": "India",
+      "capacity": 70
+    }
+  },
+  {
+    "model": "forkilla.Restaurant",
+    "pk": 8,
+    "fields": {
+      "restaurant_number": "09186734",
+      "name": "Pai mei",
+      "menu_description" :"Fideos con salsa teriyaki",
+      "price_average" : "70",
+      "is_promot" : "True",
+      "rate" : "5",
+      "category" : "Chin",
+      "city": "Hong Kong",
+      "address": "Ma sha, 33",
+      "country": "China",
+      "capacity": 90
+    }
+  },
+  {
+    "model": "forkilla.Restaurant",
+    "pk": 9,
+    "fields": {
+      "restaurant_number": "09186727",
+      "name": "L'eclair",
+      "menu_description" :"Comidee rique",
+      "price_average" : "20",
+      "is_promot" : "True",
+      "rate" : "5",
+      "category" : "Vegy",
+      "city": "paris",
+      "address": "Le Medii, 33",
+      "country": "France",
+      "capacity": 60
+    }
+  },
+  {
+    "model": "forkilla.Restaurant",
+    "pk": 10,
+    "fields": {
+      "restaurant_number": "09186711",
+      "name": "Istambul",
+      "menu_description" :"Kebab, durum , falafel",
+      "price_average" : "15",
+      "is_promot" : "True",
+      "rate" : "4.5",
+      "category" : "Turk",
+      "city": "Barcelona",
+      "address": "Les Rambles, 40",
+      "country": "Spain",
+      "capacity": 40
+    }
+  },
+  {
+    "model": "forkilla.Restaurant",
+    "pk": 11,
+    "fields": {
+      "restaurant_number": "09186755",
+      "name": "Bar Mexicano",
+      "menu_description" :"Tacos con salsa picante",
+      "price_average" : "35",
+      "is_promot" : "True",
+      "rate" : "5",
+      "category" : "Mexi",
+      "city": "Barcelona",
+      "address": "Les Rambles, 40",
+      "country": "Spain",
+      "capacity": 40
+    }
+  }
+]

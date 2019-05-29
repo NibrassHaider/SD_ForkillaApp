@@ -1,0 +1,76 @@
+{% extends "forkilla/base.html" %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>My Reservations</title>
+<style>
+.button1 {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #BCA9F5;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 14px;
+  padding: 15px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button1 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button1 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button1:hover span {
+  padding-right: 25px;
+}
+
+.button1:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+</style>
+</head>
+<body>
+    {% if reserves %}
+        <h1>My Reserved Restaurants</h1>
+        {% for r in reserves %}
+            ID : {{ r.restaurant.restaurant_number }}
+            People : {{ r.num_people }}
+            Day : {{ r.day }}
+            Time : {{ r.get_human_slot }}
+            <a class="button1" data-role="button" href="{% url 'review' r.restaurant.restaurant_number %}">Give a review </a>
+            <br>
+
+        {% endfor %}
+    {% endif %}
+
+    {% if reservesHoy %}
+        <h1>My Reserved Restaurants</h1>
+        {% for r in reservesHoy %}
+            ID : {{ r.restaurant.restaurant_number }}
+            People : {{ r.num_people }}
+            Day : {{ r.day }}
+            Time : {{ r.get_human_slot }}
+            id:{{ r.id  }}
+            <a class="button1" data-role="button" href="{% url 'delete' r.id %}">Delete a Restaurant </a>
+            <br>
+        {% endfor %}
+    {% endif %}
+
+</body>
+{% endblock %}

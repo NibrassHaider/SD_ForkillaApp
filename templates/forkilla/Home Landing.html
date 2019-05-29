@@ -1,0 +1,17 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Landing Page</title>
+</head>
+<body>
+    <h1>Welcome to Forkilla </h1>
+    <h2>Promoted Restaurants</h2>
+    <ul>
+    {% for restaurant in promoted_restaurants%}
+        <li>Restaurant Id: {{ restaurant.restaurant_number }}, Category: {{ restaurant.get_human_category }}, City: {{ restaurant.city }}, Country: {{ restaurant.country }}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All 12 restaurants</title>
+</head>
+<body>
+        <ul>
+        {% for restaurant in restaurants %}
+            <li>Restaurant Id: {{ restaurant.restaurant_number }}, Category: {{ restaurant.get_human_category }}, City: {{ restaurant.city }}, Country: {{ restaurant.country }} </li>
+        {% endfor %}
+        </ul>
+
+</body>
+</html>
