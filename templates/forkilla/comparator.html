@@ -50,7 +50,7 @@
         requests.push(
             $.ajax({
                 type: 'GET',
-                url: 'http://127.0.0.1:8000/api/restaurants/?category=' + category + '&is_new=' + isNew +'&price=' + maximum,
+                url: 'https://sd2019-forkillab10.herokuapp.com/api/restaurants/?category=' + category + '&is_new=' + isNew +'&price=' + maximum,
                 dataType: 'json',
                 async: true,
                 error: function(jqXHR, exception){
