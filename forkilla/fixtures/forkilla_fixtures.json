@@ -111,14 +111,14 @@
       "restaurant_number": "09186117",
       "name": "Rasoi",
       "menu_description" :"Biryani , Pulao , chiken tikka",
-      "price_average" : "20",
+      "price_average" : "50",
       "is_promot" : "True",
       "rate" : "5",
       "category" : "Hind",
       "city": "Mumbai",
       "address": "GT Road, 33",
       "country": "India",
-      "featured_photo":"https://www.thedeliciouscrescent.com/wp-content/uploads/2016/05/Easy-Hyderabadi-Chicken-Biryani.jpg",
+      "featured_photo":"https://www.goya.com/media/3144/paella-marinera.jpg?quality=80",
       "capacity": 70
     }
   },
