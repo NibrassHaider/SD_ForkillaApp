@@ -123,9 +123,9 @@ transform: scale(1.1);
         <br>
         Country : {{ details.country }}
         <br>
-        Photo : {{ details.featured_photo }}
-        <br>
         Category : {{ details.category }}
+        <br>
+        Photo : <img src = "{{details.featured_photo}}" style="width:200px;height:200px;">
     </ul>
 
     {% else %}
