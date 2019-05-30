@@ -282,7 +282,7 @@ def review(request,restaurant_number=""):
 
             message = form.cleaned_data['message']
             rating = form.cleaned_data['rating']
-            if(rating<5 and rating >0):
+            if(rating<=5 and rating >0):
                 rev.message = message ;
                 rev.rating = rating;
                 rev.number = number;
