@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'rest_framework',
 ]
 CORS_ORIGIN_WHITELIST = (
+    '*',
     'google.com',
     'localhost',
     '127.0.0.1'
