@@ -42,6 +42,23 @@ INSTALLED_APPS = [
     'forkilla.apps.ForkillaConfig',
     'rest_framework',
 ]
+CORS_ORIGIN_WHITELIST = (
+    'google.com',
+    'localhost',
+    '127.0.0.1'
+)
+
+
+
+CORS_ALLOW_METHODS = (
+    'DELETE',
+    'GET',
+    'HEAD',
+    'OPTIONS',
+    'POST',
+    'PUT',
+
+)
 
 REST_FRAMEWORK = {
       # Use Django's standard `django.contrib.auth` permissions,
