@@ -26,7 +26,7 @@ class CommercialForm(UserCreationForm):
     last_name = forms.CharField(max_length=150, required=False)
     email = forms.EmailField(max_length=128,required=False)
     #screen_name = forms.CharField(max_length=50, required=False)  # name that appears on screen (complementary username)
-    birthday = forms.DateField(required=False)
+    birthday = forms.DateField(required=False,help_text='año(xxxx)-mes-dia')
     #password = forms.CharField(widget=forms.PasswordInput,required=False)
 
     class Meta:
